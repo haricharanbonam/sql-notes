@@ -1,0 +1,43 @@
+--REGEXP :: 
+SELECT city
+FROM station
+WHERE city REGEXP '^A';
+
+
+
+
+---it selects all the words ends with [aeiou]
+
+SELECT distinct city
+FROM station
+WHERE city REGEXP '[aeiou]$';
+
+--starting with
+
+ SELECT DISTINCT city
+FROM station
+WHERE LOWER(city) REGEXP '^[aeiou]';
+
+--containing 
+
+
+SELECT DISTINCT city
+FROM station
+WHERE LOWER(city) REGEXP '[aeiou]';
+
+
+---not containing
+SELECT DISTINCT city
+FROM station
+WHERE LOWER(city) NOT REGEXP '^[aeiou]';
+
+
+
+
+--both start and end
+SELECT DISTINCT city
+FROM station
+WHERE LOWER(city) REGEXP '^[aeiou].*[aeiou]$';
+
+
+
