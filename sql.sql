@@ -47,7 +47,7 @@ WHERE LOWER(city) REGEXP '^[aeiou].*[aeiou]$';
 ---9-8-7-6-5-4-3-2-1(NEGATIVE INDEXING)
 select substring(string,start_index,length(from_that_index)) from dual;
 select substring("hari charan",2,5) from dual;
---ari c   starting from that index it goes to that length
+--ari c   starting from that index it goes to that length (it starts off at 2 and from that it goes upto length 5 
 
 select substring("hari charan",-4,3) from dual;
 --ara
