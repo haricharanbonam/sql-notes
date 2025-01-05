@@ -56,7 +56,16 @@ select substring("hari charan",-4,3) from dual;
 
 --Example: select name from students where marks>75 order by substring(name,-3,3) asc,id asc;
 
-
+--checking triangles
+select
+case
+when a+b<=c or b+c<=a or a+c<=b then
+"Not A Triangle"
+when a=b and b=c then "Equilateral"
+when a=b or b=c or c=a then "Isosceles"
+else
+"Scalene"
+end from triangles;
 
 
 
